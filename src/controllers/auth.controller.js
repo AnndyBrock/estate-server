@@ -67,6 +67,7 @@ export const login = async (req, res) => {
             maxAge: 1000*60
         }).status(200).json({
             message: 'Login successful',
+            token,
             user: userWithoutPassword,
         });
     } catch (error) {

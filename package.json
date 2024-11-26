@@ -4,9 +4,14 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
+    "lint": "tsc --noEmit && eslint src/",
+    "lint:fix": "eslint src/ --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon  app.js"
+  },
+  "prisma": {
+    "schema": "./src/prisma/schema.prisma"
   },
   "keywords": [],
   "author": "",
