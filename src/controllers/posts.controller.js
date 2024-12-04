@@ -70,9 +70,6 @@ export const getPost = async (req, res) => {
                   },
               });
 
-              console.log("saved")
-              console.log(saved)
-
               isSaved = saved ? true : false;
           } catch (err) {
               console.error('Token verification failed:', err);
