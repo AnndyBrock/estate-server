@@ -1,6 +1,5 @@
 import bcrypt from "bcrypt";
 import prisma from "../lib/prisma.js"
-import jwt from 'jsonwebtoken';
 
 export const getUsers = async (req, res) => {
     try {
@@ -24,7 +23,7 @@ export const getUser = async (req, res) => {
         return res.status(404).json({ message: 'User not found' });
     } catch (e) {
         console.log(e)
-        return res.status(500).json({message: "Failed to get users"})
+        return res.status(500).json({message: "Failed to get user"})
     }
 };
 
